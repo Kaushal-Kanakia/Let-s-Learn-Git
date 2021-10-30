@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>My title</title>
+    </head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<body>
+    <h2>Welcome</h2>
+    <input id="email" style="width:300px;" type ="text" placeholder="Email" />
+    <label id="lbuser" style="color: red; visibility: hidden;">Invalid Email</label>
+    <br><br>
+    <button class="btn" type="submit">Submit</button>
+</body>
+
+<script>
+
+    $(document).ready(function(){
+        $(".btn").on("click", function(){
+            var arr = $("#email").val().split(" ").splice(-2);
+            var str = arr[0]+ " " +arr[1];
+            if(str !== "No number")
+            {
+                $("#email").val($("#email").val() + " No number");
+                console.log($("#email").val().split(" ").splice(-2));
+            }
+        })
+    });
+
+</script>
+
+</html>
